@@ -16,5 +16,23 @@
     "description": "These have had their fair share of grinds. The right shoe is missing the toe cap and has a deep crack running through the sole. They will fall apart if continued to be grinded, however they are still a cool collectors piece to put on a shelf. The insole has been replaced.",
     "price": 85,
     "size": "Mens 9"
+  },
+  {
+    "name": "Dr. Martens",
+    "description": "Vintage chunky sandals. Runs a little large to fit 7.5 - 8.",
+    "price": 95,
+    "size": "Womens 7"
+  },
+  {
+    "name": "Reebok Kamikaze II Low",
+    "description": "Exact model worn by Shawn Kemp in the 1996 NBA All Star Game.",
+    "price": 105,
+    "size": "Mens 9"
+  },
+  {
+    "name": "British Knights Dymacel",
+    "description": "Vintage. Does have some wear shown in pictures and sock lint. No box.",
+    "price": 90,
+    "size": "Mens 9"
   }
 ]
