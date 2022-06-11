@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS rewind_db;
+CREATE DATABASE rewind_db;
