@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Nike Sky Force",
+    "description": "There is a defect on the right toe but nothing bad. The flash makes the white much brighter than in person. The heels have been worn down.",
+    "price": 2000
+  },
+  {
+    "name": "The Ultimate Tech Quiz",
+    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+    "price": 10000
+  },
+  {
+    "name": "Roll 'Em Up",
+    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
+    "price": 800
+  }
+]
