@@ -12,4 +12,4 @@ app.get("/", (req, res) => {
 });
 app.listen(port, () => {
   console.log(`Group Project listening at http://localhost:${port}`);
-});
+}); 
