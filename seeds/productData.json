@@ -3,36 +3,42 @@
     "name": "Nike Sky Force",
     "description": "There is a defect on the right toe but nothing bad. The flash makes the white much brighter than in person. The heels have been worn down.",
     "price": 2000,
+    "filename": "01-nike-sky-force.jpg",
     "size": "Mens 13"
   },
   {
     "name": "K-Swiss Tennis Shoe",
     "description": "The shoes are new without box (box may have shelf wear.)",
     "price": 130,
+    "filename": "02-k-swiss-shoes.jpg",
     "size": "Womens 6"
   },
   {
     "name": "Soap Shoes",
     "description": "These have had their fair share of grinds. The right shoe is missing the toe cap and has a deep crack running through the sole. They will fall apart if continued to be grinded, however they are still a cool collectors piece to put on a shelf. The insole has been replaced.",
     "price": 85,
+    "filename": "03-soap-shoes.jpg",
     "size": "Mens 9"
   },
   {
     "name": "Dr. Martens",
     "description": "Vintage chunky sandals. Runs a little large to fit 7.5 - 8.",
     "price": 95,
+    "filename": "04-dr-martens.jpg",
     "size": "Womens 7"
   },
   {
     "name": "Reebok Kamikaze II Low",
     "description": "Exact model worn by Shawn Kemp in the 1996 NBA All Star Game.",
     "price": 105,
+    "filename": "05-reebok-kamikaze-II-low.jpg",
     "size": "Mens 9"
   },
   {
     "name": "British Knights Dymacel",
     "description": "Vintage. Does have some wear shown in pictures and sock lint. No box.",
     "price": 90,
+    "filename": "06-british-knights-dymacel.jpg",
     "size": "Mens 9"
   }
 ]
