@@ -1,31 +1,34 @@
-var session = require('express-session');
-var SQLiteStore = require('connect-sqlite3')(session);
-var passport = require('passport');
-var indexer = require('./routes/index');
-var auths = require('./routes/passport');
-
-const express = require("express");
+// 
+const express = require('express');
+const session = require('express-session');
+const routes = require('./controllers');
+const path = require('path');
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const helpers = require('./utils/helpers');
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({ helpers });
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3001;
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+        expires: 8600
+  },
+  resave: true,
+  rolling: true,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  }),
+};
+app.use(session(sess));
 app.use(express.json());
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
-app.use(session({
-  secret: 'chucky cheese',
-  resave: false,
-  saveUninitialized: false,
-  store: new SQLiteStore({ db: 'sessions.db', dir: './var/db' })
-}));
-app.use(passport.authenticate('session'));
-app.use('/', indexRouter);
-app.use('/', authRouter);
-
-app.get("/", (req, res) => {
-  res.json({ message: "ok" });
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+app.use(routes);
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
-app.listen(port, () => {
-  console.log(`Group Project listening at http://localhost:${port}`);
-}); 
