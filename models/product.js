@@ -22,14 +22,13 @@ Product.init(
     description: {
       type: DataTypes.STRING,
     },
-    image: {
+    filename: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    quantity: {
+    size: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      validate: {}
     },
     category_id: {
       type: DataTypes.INTEGER,
