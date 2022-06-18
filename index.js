@@ -1,61 +1,61 @@
 const express = require('express');
 const session = require('express-session');
-const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-<<<<<<< Updated upstream
+
+
+const path = require('path');
+
+
 const helpers = require('./utils/helpers');
-=======
+
 
 const path = require('path');
 
 // const helpers = require('./utils/helpers');
->>>>>>> Stashed changes
+
 
 // var SQLiteStore = require('connect-sqlite3')(session);
 // var passport = require('passport');
 // var indexer = require('./routes/index');
 // var auths = require('./routes/passport');
-<<<<<<< Updated upstream
-=======
+
  
->>>>>>> Stashed changes
+
+
+ 
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+const helpers = require('./utils/helpers');
+
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({ helpers });
+
 const app = express();
 const PORT = process.env.PORT || 3001;
-// app.use(express.json());
-// app.use(
-//   express.urlencoded({
-//     extended: true,
-//   })
-// );
 
 const sess = {
-  secret: 'chucky cheese',
-  cookie: {},
-  resave: false,
+  secret: 'Super secret secret',
+  cookie: {
+        expires: 8600
+  },
+  resave: true,
+  rolling: true,
   saveUninitialized: true,
-  store: new SequelizeStore({ 
-    db: sequelize})
+  store: new SequelizeStore({
+    db: sequelize
+  }),
 };
 
 app.use(session(sess));
-// app.use(passport.authenticate('session'));
-// app.use('/', indexer);
-// app.use('/', auths);
-
-// app.get("/", (req, res) => {
-//   res.json({ message: "ok" });
-// });
-
-// app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use(routes);
 
