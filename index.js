@@ -1,7 +1,16 @@
 const express = require('express');
 const session = require('express-session');
 const routes = require('./controllers');
+ matt12_branch
 const path = require('path');
+======
+const helpers = require('./utils/helpers');
+
+// var SQLiteStore = require('connect-sqlite3')(session);
+// var passport = require('passport');
+// var indexer = require('./routes/index');
+// var auths = require('./routes/passport');
+ main
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
