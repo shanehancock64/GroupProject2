@@ -4,8 +4,8 @@ const { User, Cart, Order } = require('../models');
 // GET /api/users
 router.get('/', async (req, res) => {
     try {
-        const getData = await User.findAll({
-            attributes: { exclude: ['password'] },
+         const getData = await User.findAll({
+             attributes: { exclude: ['password'] },
         })
         res.json(getData)
     } catch (err) {
