@@ -26,7 +26,7 @@ router.post('/', withAuth, async (req, res) => {
     try {
         const postData = await Cart.create({
             user_id: req.session.user_id,
-            product_id: req.session.product_idid,
+            product_id: req.session.product_id,
             quantity: req.body.quantity,
         })
         res.json(postData)
@@ -34,3 +34,5 @@ router.post('/', withAuth, async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+module.exports = router;

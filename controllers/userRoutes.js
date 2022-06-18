@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Cart, Order } = require('../models');
-const withAuth = require('../utils/auth');
 
 // GET /api/users
 router.get('/', async (req, res) => {
@@ -103,3 +102,5 @@ router.post('/logout', (req, res) => {
         res.status(404).end();
     }
 });
+
+module.exports = router;

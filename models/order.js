@@ -38,13 +38,6 @@ Order.init(
                 key: 'id',
             },
         },
-        shipping_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'shipping',
-                key: 'id',
-            },
-        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

@@ -3,11 +3,9 @@ const Cart = require('./Cart');
 const Category = require('./Category');
 const Order = require('./Order');
 const Product = require('./Product');
-const Shipping = require('./Shipping');
 const User = require('./User')
 
 //Billing can have many Orders
-//Shipping can have many Orders
 //Product can have many Carts and Orders
 //User can have many Carts and Orders
 //Category can have many Products
@@ -18,15 +16,6 @@ Billing.hasMany(Order, {
 });
 Order.belongsTo(Billing, {
   foreignKey: 'billing_id'
-});
-
-
-Shipping.hasMany(Order, {
-  foreignKey: 'shipping_id',
-  onDelete: 'SET NULL'
-});
-Order.belongsTo(Shipping, {
-  foreignKey: 'shipping_id'
 });
 
 
@@ -75,4 +64,4 @@ Product.belongsTo(Category, {
 });
 
 
-module.exports = { Billing, Cart, Category, Order, Product, Shipping, User };
+module.exports = { Billing, Cart, Category, Order, Product, User };
