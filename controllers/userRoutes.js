@@ -28,7 +28,7 @@ router.get('/:id', async (req, res) => {
                 },
                 {
                     model: Order,
-                    attributes: ['OrderId', 'quantity', 'purchasePrice', 'ccLast4']
+                    attributes: ['orderId', 'quantity', 'purchasePrice', 'ccLast4']
                 }
             ]
         })
