@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-var category = require("../models");
+const { Category, Product } = require("../models");
 
 // GET categories
 router.get('/', async (req, res) => {
@@ -31,11 +31,10 @@ router.post('/products/category/:categoryName', async (req, res) => {
 
 router.post('/category', async (req, res) => {
     try {
-        const categories = await Category.create(req.body);
-        Category.create({
+        const categories = await Category.create({
             name: req.body.name
         }).then(function(result) {
-            res.send("created " + req.body.name);
+            res.json(categories);
         });
     } catch (err) {
         res.status(400).json(err);
