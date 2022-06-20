@@ -3,7 +3,7 @@ const Product = require('./product');
 const Cart = require('./cart');
 const Order = require('./order');
 const Shipping = require('./shipping');
-const Billing = require('billing');
+const Billing = require('./billing');
 
 //User can have many products and carts
 //Product can have many carts
