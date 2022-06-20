@@ -19,7 +19,9 @@ All elements of the project can be examined here: https://github.com/shanehancoc
 
 Referenced documentation and tutorials:
 
-https://handlebarsjs.com/guide/expressions.html#helpers
+Helpers | Handlebars: https://handlebarsjs.com/guide/expressions.html#helpers
+
+Associations - One to Many | https://sequelize.org/docs/v6/core-concepts/assocs/#one-to-many-relationships
 
 Additional assistance:
 
