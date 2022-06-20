@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
 <head>
   <meta charset="UTF-8">
@@ -41,4 +42,38 @@
   {{/if}}
 </body>
 
+=======
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>90s Rewind</title>
+		<link rel="stylesheet" href="/public/css/jass.css">
+		<link rel="stylesheet" href="/public/css/style.css">
+	</head>
+	<body>
+		<div class="flex-column justify-space-around">
+			<header class="display-flex justify-space-between align-center p-2">
+			<h1>
+				<a href="/dashboard">Tech Blog!</a>
+			</h1>
+			<nav>
+				{{#if logged_out}}
+				<h1>90's Rewind</h1> | 
+				<a href="/login" class="navbar-item is-hoverable pt-1">Login</a> |
+				<a href="/products" class="navbar-item is-hoverable pt-1">Products</a>
+				{{/if}}
+			</nav>
+			</header>
+			<main class="container container-fluid mt-5">
+			{{{ body }}}
+			</main>
+			<footer class="info">
+				<p>Created by Shane Hancock, Cole Hubert, Matt Estes and Leah Bredemeyer</a></p>
+			</footer>
+		</div>
+		{{#if logged_in}}
+  		<script src="/js/logout.js"></script>
+  		{{/if}}	
+	</body>
+>>>>>>> main
 </html>
