@@ -12,10 +12,15 @@
       <span class="dollar-amount">{{format_amount product.price}}</span>
     </p>
     <p>{{product.name}} : {{product.description}}</p>
+    {{#if logged_in}}
+    <a href="/cart" class="button is-primary">Buy</a>
+    {{else}}
+    <a href="/login" class="button is-primary">Buy</a>
+    {{/if}}
   </div>
   <div class="col-md-7">
     <p>
-      {{<img src="/images/{{product.filename}}" alt="{{product.description}}">}}
+      <img width=200 height=200 src="/images/{{product.filename}}" alt="{{product.description}}">
     </p>
   </div>
 </div>
