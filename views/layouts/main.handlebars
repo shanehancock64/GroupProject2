@@ -14,18 +14,22 @@
 				<a href="/dashboard">Tech Blog!</a>
 			</h1>
 			<nav>
-				<h1>90's Rewind</h1>
+				{{#if logged_out}}
+				<h1>90's Rewind</h1> | 
 				<a href="/login" class="navbar-item is-hoverable pt-1">Login</a> |
-				<a href="/products" class="navbar-item is-hoverable pt-1">Products</a> | 
+				<a href="/products" class="navbar-item is-hoverable pt-1">Products</a>
+				{{/if}}
 			</nav>
 			</header>
 			<main class="container container-fluid mt-5">
-			<!-- Render the sub layout -->
 			{{{ body }}}
 			</main>
 			<footer class="info">
 				<p>Created by Shane Hancock, Cole Hubert, Matt Estes and Leah Bredemeyer</a></p>
 			</footer>
-		</div>	
+		</div>
+		{{#if logged_in}}
+  		<script src="/js/logout.js"></script>
+  		{{/if}}	
 	</body>
 </html>
