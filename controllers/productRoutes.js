@@ -3,7 +3,6 @@ const { Product } = require('../models');
 const withAuth = require('../utils/auth');
 
 // find all products
-
 router.get('/', async (req, res) => {
   try {
       const getData = await Product.findAll({})
@@ -14,7 +13,6 @@ router.get('/', async (req, res) => {
 });
 
 // Product by id
-
 router.get('/:id', async (req, res) => {
   try {
       const getData = await Product.findOne({
@@ -33,7 +31,6 @@ router.get('/:id', async (req, res) => {
 });
 
 // Post product
-
 router.post('/', async (req, res) => {
   try {
     const postData = await Product.create(req.body)
@@ -43,7 +40,5 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
-
 
 module.exports = router;
