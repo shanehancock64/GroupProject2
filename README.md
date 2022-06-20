@@ -19,7 +19,7 @@ All elements of the project can be examined here: https://github.com/shanehancoc
 
 Referenced documentation and tutorials:
 
-
+https://handlebarsjs.com/guide/expressions.html#helpers
 
 Additional assistance:
 

@@ -1,31 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>90s Rewind</title>
-		<link rel="stylesheet" href="/public/css/jass.css">
-		<link rel="stylesheet" href="/public/css/style.css">
-	</head>
-	<body>
-		<div class="flex-column justify-space-around">
-			<header class="display-flex justify-space-between align-center p-2">
-			<h1>
-				<a href="/dashboard">Tech Blog!</a>
-			</h1>
-			<nav>
-				<h1>90's Rewind</h1>
-				<a href="/login" class="navbar-item is-hoverable pt-1">Login</a> |
-				<a href="/products" class="navbar-item is-hoverable pt-1">Products</a> | 
-			</nav>
-			</header>
-			<main class="container container-fluid mt-5">
-			<!-- Render the sub layout -->
-			{{{ body }}}
-			</main>
-			<footer class="info">
-				<p>Created by Shane Hancock, Cole Hubert, Matt Estes and Leah Bredemeyer</a></p>
-			</footer>
-		</div>	
-	</body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>90's Rewind</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <span role="img" aria-label="money">💸</span>
+        <a href="/">90's Rewind</a>
+      </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
 </html>
