@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
       });
  
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
         alert('Failed to create product');
       }
@@ -31,7 +31,7 @@ const newFormHandler = async (event) => {
       });
  
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
         alert('Failed to delete product');
       }
@@ -39,7 +39,7 @@ const newFormHandler = async (event) => {
   };
  
   document
-    .querySelector('.new-product-form')
+    .querySelector('.new-project-form')
     .addEventListener('submit', newFormHandler);
  
   document
