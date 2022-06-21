@@ -2,6 +2,54 @@ const router = require('express').Router();
 const { Product } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+router.get('/', async (req, res) => {
+  try {
+    const productData = await Product.findAll({
+      include: [
+        {
+          model: Product,
+          attributes: [
+            'filename',
+            'description',
+          ],
+        }
+      ]
+    });
+    const products = productData.map((product) =>
+    Product.get({ plain: true })
+    );
+    res.render('homepage', {
+      products,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+router.get('/', async (req, res) => {
+  try {
+    const productData = await Product.findByPk(req.params.id, {
+      include: [
+        {
+          model: Product,
+          attributes: [
+            'id',
+            'name', 
+            'description',
+            'price',
+            'filename',
+            'size',
+          ],
+        }
+      ]
+    });
+    const products = productData.get({ plain: true });
+    res.render('homepage', { products,});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newProduct = await Product.create({
