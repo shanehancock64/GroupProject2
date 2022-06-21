@@ -9,14 +9,13 @@
       </h2>
       <p>
         <span for="img" aria-label="money">💲</span>
-        <!-- Pass needed_funding value to the helper function -->
         <span class="dollar-amount">{{format_amount product.price}}</span>
       </p>
       <p>{{product.name}} : {{product.description}}</p>
       {{#if logged_in}}
-      <a href="/cart" class="button is-primary">Buy</a>
+      <button class="btn btn-default noPad" type="submit" value="Submit">Add To Cart</button>
       {{else}}
-      <a href="/login" class="button is-primary">Buy</a>
+      <a href="/login">buy</a>
       {{/if}}
     </div>
     <div class="col-md-7">
