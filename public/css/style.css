@@ -1,0 +1,11 @@
+:root {
+    --primary: #e2e2e2;
+    --light: #e3e4e3;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    background: var(--primary);
+    color: var(--light);
+  }
