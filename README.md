@@ -2,7 +2,7 @@
 
 ## Project 2 - Team 1
 
-This application creates a place for fans of 90s footwear to find hard-to-find throwback shoes.
+This application creates a place for fans of 90s footwear to search for hard-to-find throwback shoes.
 
 ## Mock-up
 
@@ -10,7 +10,7 @@ This application creates a place for fans of 90s footwear to find hard-to-find t
 
 ## Installation
 
-This application requires installation of npm (incl. nodemon, bcrypt, dotenv, express, mysql2, sequelize, express-handlebars), MySQL, and Heroku. 
+This application requires installation of npm (incl. nodemon, bcrypt, dotenv, express, jshint, mysql2, sequelize, express-handlebars), MySQL, and Heroku. 
 
 The deployed application can be found here: https://group-project-90s-rewind.herokuapp.com/
 
@@ -26,6 +26,8 @@ Associations - One to Many | https://sequelize.org/docs/v6/core-concepts/assocs/
 
 Deploy with Heroku and MySQL: https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql
 
+JSHint Documentation: https://jshint.com/docs/
+
 Additional assistance:
 
 Thank you to our instructional staff Farish and Riley!
@@ -38,7 +40,9 @@ The app's database uses MySQL and Sequelize, the pages use Handlebars.js as the 
 
 90's Rewind has a folder structure that meets the Model-View-Controller paradigm, uses npm express-session and cookies to authenticate logged-in users, and protects key API keys and other sensitive information with environment variables. 
 
-The app uses , a technology not discussed in the boot camp.  
+The app uses JSHint, a technology not discussed in the boot camp:
+
+![JSHint.](./public/images/jshint.jpg)
 
 90's Rewind has polished, responsive UI, and accepts and responds to user input.
 
