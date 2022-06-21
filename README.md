@@ -43,3 +43,7 @@ The app uses , a technology not discussed in the boot camp.
 90's Rewind has polished, responsive UI, and accepts and responds to user input.
 
 The app meets good-quality coding standards, and is accompanied by this professional README.
+
+## Team Members
+
+Leah Bredemeyer, Matt Estes, Shane Hancock, Cole Hubert
